@@ -1,8 +1,10 @@
-import { Footer } from "flowbite-react";
+import Footter from "../component/Footter";
+import Navvbar from "../component/Navbar";
 
 function Home() {
   return (
     <div>
+      <Navvbar />
       <div className="md:h-96 h-72 relative flex items-center justify-center">
         <img
           src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=1949&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -86,30 +88,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <Footer container bgDark className="bg-black rounded-none">
-        <div className="w-full text-center">
-          <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
-            <span className="self-center whitespace-nowrap text-xl font-bold text-red-700">
-              Groove
-              <span className="text-xl font-bold text-white">Football</span>
-            </span>
-
-            <Footer.LinkGroup className="text-white gap-3 justify-center mt-2">
-              <Footer.Link href="#">About</Footer.Link>
-              <Footer.Link href="#">Privacy Policy</Footer.Link>
-              <Footer.Link href="#">Licensing</Footer.Link>
-              <Footer.Link href="#">Contact</Footer.Link>
-            </Footer.LinkGroup>
-          </div>
-          <Footer.Divider />
-          <Footer.Copyright
-            href="#"
-            by="GrooveFootball"
-            year={2023}
-            className="text-white"
-          />
-        </div>
-      </Footer>
+      <Footter />
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import { Button, Navbar } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 function Navvbar() {
   return (
     <div>
-      <Navbar fluid className="bg-black text-white">
+      <Navbar fluid className="bg-black text-white fixed z-50 w-full">
         <Navbar.Brand href="">
           <span className="self-center whitespace-nowrap text-xl font-bold text-red-700">
             Groove
@@ -13,24 +14,30 @@ function Navvbar() {
           </span>
         </Navbar.Brand>
         <div className="flex md:order-2">
-          <Button className="bg-red-700 font-bold">LOGIN</Button>
+          <Button color="failure">
+            {" "}
+            <Link to={"/login"}>LOGIN</Link>{" "}
+          </Button>
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="#" className="text-white hover:text-gray-700">
+          <Navbar.Link href="/" className="text-white">
             Home
           </Navbar.Link>
-          <Navbar.Link href="#" className="text-white hover:text-gray-700">
-            About
+          <Navbar.Link href="/dribbling" className="text-white">
+            Dribbling
           </Navbar.Link>
-          <Navbar.Link href="#" className="text-white hover:text-gray-700">
-            Services
+          <Navbar.Link href="/tackling" className="text-white">
+            Tackling
           </Navbar.Link>
-          <Navbar.Link href="#" className="text-white hover:text-gray-700">
-            Pricing
+          <Navbar.Link href="/passing" className="text-white">
+            Passing
           </Navbar.Link>
-          <Navbar.Link href="#" className="text-white hover:text-gray-700">
-            Contact
+          <Navbar.Link href="/shooting" className="text-white">
+            Shooting
+          </Navbar.Link>
+          <Navbar.Link href="/stop" className="text-white">
+            Stop
           </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
